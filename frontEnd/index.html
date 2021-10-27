@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adana House Admin</title>
+</head>
+<body>
+    <a href="#">See Count</a>
+    <hr>
+   <form action="http://localhost:1011/addMenu" method="get">
+    <h5>Menu</h5>
+    <input type="text" name="menuItems" placeholder="Menu Item Separate by comma">
+    <br>
+    <label for="time">Time:</label>
+    <select name="time" id="time">
+      <option value="Morning">Morning</option>
+      <option value="After-Noon">After-Noon</option>
+      <option value="Evening">Evening</option>
+      <option value="Night">Night</option>
+    </select>
+    <h5>Date</h5>
+    <input type="date" name="date">
+    <input type="submit" value="Add">
+
+   </form>
+
+</body>
+</html>
