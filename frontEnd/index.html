@@ -1,30 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adana House Admin</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap/fonts/css/fontawesome.min.css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" l>
+  <link rel="stylesheet" href="./bootstrap/css/mdb.css" l>
+  <link rel="stylesheet" href="./bootstrap/css/style.css" l>
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Adana House Admin</title>
 </head>
+
 <body>
-    <a href="#">See Count</a>
-    <hr>
-   <form action="http://localhost:1011/addMenu" method="get">
-    <h5>Menu</h5>
-    <input type="text" name="menuItems" placeholder="Menu Item Separate by comma">
-    <br>
-    <label for="time">Time:</label>
-    <select name="time" id="time">
-      <option value="Morning">Morning</option>
-      <option value="After-Noon">After-Noon</option>
-      <option value="Evening">Evening</option>
-      <option value="Night">Night</option>
-    </select>
-    <h5>Date</h5>
-    <input type="date" name="date">
-    <input type="submit" value="Add">
 
-   </form>
+  <div class="container  ">
+    <br><br><br>
+    <h1 class="text-dark">Adana House</h1>
 
+
+
+    <div class="row">
+      <div class="col-md-3">
+        <!-- Tabs nav -->
+        <div class="nav flex-column nav-pills nav-pills-custom mt-4" id="v-pills-tab" role="tablist"
+          aria-orientation="vertical">
+          <a class="nav-link mb-3 p-3 shadow active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+            role="tab" aria-controls="v-pills-home" aria-selected="true">
+            <i class="fas fa-plus-circle"></i>&nbsp;
+            <span class="font-weight-bold small text-uppercase">Add Items</span></a>
+
+          <a class="nav-link mb-3 p-3 shadow" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+            role="tab" aria-controls="v-pills-profile" aria-selected="false">
+            <i class="fas fa-book"></i>&nbsp;
+            <span class="font-weight-bold small text-uppercase">View Counts</span></a>
+
+
+        </div>
+      </div>
+
+
+      <div class="col-md-9">
+        <!-- Tabs content -->
+        <div class="tab-content d-flex justify-content-center" id="v-pills-tabContent">
+          <div class="tab-pane fade shadow rounded bg-white show active p-5" id="v-pills-home" role="tabpanel"
+            aria-labelledby="v-pills-home-tab">
+            <form action="http://localhost:1011/addMenu" method="get" class="form">
+
+              <div class="addItems ">
+                <div class="form-group form-inline">
+                  <label class="h5">Menu</label>
+
+
+                  <input type="text" class="form-control ml-3" name="menuItems"
+                    placeholder="Menu Item Separate by comma">
+                </div>
+                <div class="form-group form-inline">
+                  <label for="time" class="h5">Time</label>&nbsp;
+                  <select name="time" class="form-control ml-3" id="time">
+                    <option value="Morning">Morning</option>
+                    <option value="After-Noon">After-Noon</option>
+                    <option value="Evening">Evening</option>
+                    <option value="Night">Night</option>
+                  </select>
+                </div>
+                <div class="form-group form-inline">
+                  <label class="h5">Date</label>&nbsp;
+                  <input type="date" class="form-control ml-3" name="date">
+
+
+                </div>
+                <div class="form-group d-flex justify-content-center">
+                  <input type="submit" value="Add" class="btn btn-primary">
+
+                </div>
+
+
+                <br>
+
+
+
+              </div>
+            </form>
+          </div>
+
+          <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-profile" role="tabpanel"
+            aria-labelledby="v-pills-profile-tab">
+            <div class="viewCounts">
+              <table class="table">
+                <tr>
+                  <th scope="col" class="lead">Morning</th>
+                  <th scope="col" class="lead">Afternoon</th>
+                  <th scope="col" class="lead">Evening</th>
+                  <th scope="col" class="lead">Night</th>
+                </tr>
+                <tr>
+                  <td scope="row" id="morning">270/300</td>
+                  <td scope="row" id="afternoon" 60/300 </td> <td scope="row" id="evening" 95/300 </td> <td scope="row"
+                    id="night" 290/300 </td> </tr> </table> </div> </div> </div> </div> </div> </div> <script
+                    src="./bootstrap/js/jquery.js">
+                    </script>
+                    <script src="./bootstrap/js/popper.js"></script>
+                    <script src="./bootstrap/fonts/js/all.min.js"></script>
+                    <script src="./bootstrap/js/bootstrap.js"></script>
+                    <script src="./bootstrap/js/mdb.js"></script>
 </body>
+
 </html>
