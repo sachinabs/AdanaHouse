@@ -36,7 +36,7 @@ exports.addMenuItems = function (req, res, MongoClient,nodemailer) {
         if (result.acknowledged === true) {
             console.warn("Menus added successfully --- <<");
             res.send(
-                "<script>alert('Menus Added successfully'); </script>"
+                "<script>alert('Menus Added successfully');  window.history.go(-1); </script>"
             );
         } else {
             console.log("Data Not Inserted");
