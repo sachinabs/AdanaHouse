@@ -14,6 +14,7 @@ const app = express();
 let addMenu = require("./modules/admin_addMenu");
 let userYesCount = require("./modules/userResponse_Yes");
 let userNoCount = require("./modules/userResponse_No");
+let totalCount = require("./modules/total_count");
 
 
 app.get("/addMenu",cors(),(req,res)=>{
@@ -28,6 +29,10 @@ app.get("/yes/:user",cors(),(req,res) => {
 app.get("/no/:user",cors(),(req,res) => {
     userNoCount.countForNo(req,res,MongoClient);
 })
+app.get("/counts",cors(),(req,res) => {
+    totalCount.counts(req,res,MongoClient);
+})
+
 
 
 const port = 1011;
