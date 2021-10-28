@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./bootstrap/css/mdb.css" l>
   <link rel="stylesheet" href="./bootstrap/css/style.css" l>
   <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/httpRequest.js"></script>
   <title>Adana House Admin</title>
 </head>
 
@@ -57,7 +58,8 @@
             aria-labelledby="v-pills-home-tab">
             <form action="http://localhost:1011/addMenu" method="get" class="form">
 
-              <div class="addItems ">
+              <div class="addItems">
+                <h4 class="text-success">Add Items</h4>
                 <div class="form-group form-inline">
                   <label class="h5">Menu</label>
 
@@ -76,7 +78,7 @@
                 </div>
                 <div class="form-group form-inline">
                   <label class="h5">Date</label>&nbsp;
-                  <input type="date" class="form-control ml-3" name="date">
+                  <input type="date" class="form-control ml-3">
 
 
                 </div>
@@ -96,11 +98,13 @@
 
           <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-profile" role="tabpanel"
             aria-labelledby="v-pills-profile-tab">
+            <h4 class="text-success">View Counts</h4>
+
             <div class="viewCounts">
               <div class="form-group form-inline">
                 <label class="h5">Date</label>&nbsp;
-                <input type="date" class="form-control ml-3" name="date">
-                <input type="submit" value="view" class="btn btn-success mt-3 ml-3" id="view">
+                <input type="date" class="form-control ml-3" id="view-count-date" name="view-count-date">
+                <input type="submit" value="view" class="btn btn-success mt-3 ml-3" id="view" onclick="showCount()">
 
               </div>
 
@@ -123,15 +127,16 @@
           </div>
           <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-messages" role="tabpanel"
             aria-labelledby="v-pills-messages-tab">
-            <h5 class="lead mb-4">Add new user</h5>
-            <input type="text" class="form-control" placeholder="Add new user">
+            <h4 class="text-success">Add New User</h4>
+            <input type="text" class="form-control" placeholder="User email ID">
             <input type="submit" value="Add User" class="btn btn-success mt-3" id="addUser">
 
           </div>
 
           <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-settings" role="tabpanel"
             aria-labelledby="v-pills-settings-tab">
-            <h5 class="lead mb-4">Remove user</h5>
+            <h4 class="text-success">Remove User</h4>
+
             <input type="text" placeholder="Remove user" class="form-control">
             <input type="submit" value="Remove" class="btn btn-danger mt-3" id="removeUser">
           </div>
