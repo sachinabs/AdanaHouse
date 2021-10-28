@@ -85,7 +85,7 @@ exports.addMenuItems = function (req, res, MongoClient,nodemailer) {
     })
 
     var reservers = {
-        user: ["anishbalasachin13@gmail.com","jeya270199@gmail.com"]
+        user: ["anishbalasachin13@gmail.com","jeya270199@gmail.com","navaneethstar1998@gmail.com"]
     }
 
 
